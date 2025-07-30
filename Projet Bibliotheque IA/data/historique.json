@@ -1,0 +1,26 @@
+[
+    {
+        "idutilisateur": "util01",
+        "idlivre": 2,
+        "action": "emprunt",
+        "date": "2025-07-14 03:55:07"
+    },
+    {
+        "idutilisateur": "util01",
+        "idlivre": 2,
+        "action": "retour",
+        "date": "2025-07-14 18:22:33"
+    },
+    {
+        "idutilisateur": "util01",
+        "idlivre": 3,
+        "action": "emprunt",
+        "date": "2025-07-28 18:21:43"
+    },
+    {
+        "idutilisateur": "util01",
+        "idlivre": 3,
+        "action": "retour",
+        "date": "2025-07-28 18:22:46"
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "nom": "aaaaa",
+        "prenom": "bbbbb",
+        "adresse": "1234 ccccc street ",
+        "phone": "9876543210",
+        "age": 31,
+        "statut": "Actif",
+        "idutilisateur": "util01",
+        "login": "aaaaa",
+        "motdepasse": "123456"
+    }
+]

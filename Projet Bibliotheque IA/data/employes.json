@@ -1,0 +1,28 @@
+[
+    {
+        "nom": "aaaa",
+        "prenom": "bbbb",
+        "adresse": "123 cccc street",
+        "phone": "987654321",
+        "age": 30,
+        "statut": "Part-Time",
+        "idemploye": "EMP001",
+        "shift": "Nuit",
+        "NAS": "987654321",
+        "login": "aaaa",
+        "motdepasse": "123456"
+    },
+    {
+        "nom": "yeueyue",
+        "prenom": "yuegurgur",
+        "adresse": "1235 egdj",
+        "phone": "456789321",
+        "age": 15,
+        "statut": "actif",
+        "idemploye": "003",
+        "shift": "nuit",
+        "NAS": "145236987",
+        "login": "eeee",
+        "motdepasse": "123456"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "idlivre": 1,
+        "ISBN": "456",
+        "titre": "Sous la cendre le feu",
+        "auteur": "Evelyne ",
+        "anneepublication": 1998,
+        "edition": "cle",
+        "disponible": true
+    },
+    {
+        "idlivre": 2,
+        "ISBN": "456321",
+        "titre": "Trois pretendants 1 mari",
+        "auteur": "Gauthier ",
+        "anneepublication": 1987,
+        "edition": "Ciel",
+        "disponible": true
+    },
+    {
+        "idlivre": 3,
+        "ISBN": "789654",
+        "titre": "Superman ",
+        "auteur": "Marvel",
+        "anneepublication": 2025,
+        "edition": "Terre",
+        "disponible": true
+    }
+]
