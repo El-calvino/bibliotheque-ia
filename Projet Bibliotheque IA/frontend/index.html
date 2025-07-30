@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agent IA – Bibliothèque</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 600px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        #reponse {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💬 Pose ta question à l'Agent IA</h1>
+
+    <textarea id="question" rows="4" placeholder="Ex : Donne-moi la liste des livres disponibles."></textarea>
+    <button onclick="envoyerQuestion()">Envoyer</button>
+
+    <div id="reponse"></div>
+
+    <script>
+        async function envoyerQuestion() {
+            const questionTexte = document.getElementById("question").value;
+            const reponseDiv = document.getElementById("reponse");
+            reponseDiv.innerHTML = "⏳ Attente de la réponse...";
+
+            try {
+                const response = await fetch("http://127.0.0.1:8000/ia/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ texte: questionTexte })
+                });
+
+                const data = await response.json();
+                if (data.réponse) {
+                    reponseDiv.innerHTML = "🤖 " + data.réponse;
+                } else {
+                    reponseDiv.innerHTML = "❌ Erreur dans la réponse.";
+                }
+            } catch (error) {
+                reponseDiv.innerHTML = "❌ Erreur de connexion à l'API.";
+                console.error(error);
+            }
+        }
+    </script>
+
+</body>
+</html>

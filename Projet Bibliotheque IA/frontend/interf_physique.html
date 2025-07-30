@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>API Bibliothèque - Interface</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        button { margin: 5px; padding: 10px 15px; }
+        pre { background: #f4f4f4; padding: 15px; border: 1px solid #ddd; max-height: 400px; overflow: auto; }
+    </style>
+</head>
+<body>
+    <h1>API Bibliothèque - Interface visuelle</h1>
+
+    <button onclick="getEmployes()">Afficher les employés</button>
+    <button onclick="getUtilisateurs()">Afficher les utilisateurs</button>
+    <button onclick="getLivres()">Afficher les livres disponibles</button>
+    <button onclick="getHistorique()">Afficher l'historique</button>
+
+    <h2>Résultat :</h2>
+    <pre id="result"></pre>
+
+    <script>
+        const apiUrl = "http://127.0.0.1:8000";
+
+        async function getEmployes() {
+            const res = await fetch(`${apiUrl}/employes/`);
+            const data = await res.json();
+            document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+        }
+
+        async function getUtilisateurs() {
+            const res = await fetch(`${apiUrl}/utilisateurs/`);
+            const data = await res.json();
+            document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+        }
+
+        async function getLivres() {
+            const res = await fetch(`${apiUrl}/livres/`);
+            const data = await res.json();
+            document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+        }
+
+        async function getHistorique() {
+            const res = await fetch(`${apiUrl}/historique/`);
+            const data = await res.json();
+            document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>
